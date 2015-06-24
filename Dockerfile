@@ -4,7 +4,7 @@ MAINTAINER Colin Densem "hello@summit360.co.uk"
 ENV 		DEBIAN_FRONTEND noninteractive
 # Add erlangsolutions key
 RUN apt-get update && \
-    apt-get install -y wget locales && \
+    apt-get install -y wget locales ca-certificates && \
     localedef -i en_US -f UTF-8 en_US.UTF8 && \
     wget http://packages.erlang-solutions.com/erlang-solutions_1.0_all.deb && \
     dpkg -i erlang-solutions_1.0_all.deb && \
